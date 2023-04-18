@@ -1,0 +1,44 @@
+h1 {
+  color: rgb(66, 209, 161);
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+  color: rgba(18, 189, 43, 0.989);
+}
+
+.container {
+  max-width: 800px;
+}
+.conditions {
+  position: relative;
+  left: 300px;
+
+  display: block;
+  top: -70px;
+  margin: auto;
+}
+.weather-app {
+  border: 1px solid rgb(79, 146, 183);
+  border-radius: 10px;
+
+  padding: 10px;
+  margin: 20px;
+}
+.container-grid {
+  text-align: center;
+  display: grid;
+  padding: 0 auto;
+  margin: 0 auto;
+  grid-template-columns: 130px 150px 150px 150px 150px;
+}
+hr {
+  color: rgb(14, 103, 73);
+}
+
+p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
