@@ -30,7 +30,7 @@ ul {
 
   display: block;
   top: -70px;
-  margin: auto;
+  margin-left: -150px;
 }
 .weather-app {
   border: 1px solid rgb(79, 146, 183);
@@ -45,4 +45,8 @@ ul {
   padding: 0 auto;
   margin: 0 auto;
   grid-template-columns: 120px 150px 150px 150px 130px;
+}
+
+.weather-temperature img {
+  margin-right: 10px;
 }
