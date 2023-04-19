@@ -1,11 +1,24 @@
 h1 {
   color: rgb(66, 209, 161);
   font-family: "Poppins", sans-serif;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
+hr {
+  color: rgb(14, 103, 73);
+}
+
+p {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 ul {
   list-style: none;
   color: rgba(18, 189, 43, 0.989);
+  margin-top: none;
+  padding-left: 0;
 }
 
 .container {
@@ -32,13 +45,4 @@ ul {
   padding: 0 auto;
   margin: 0 auto;
   grid-template-columns: 120px 150px 150px 150px 130px;
-}
-hr {
-  color: rgb(14, 103, 73);
-}
-
-p {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
 }
