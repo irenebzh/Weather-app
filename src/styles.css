@@ -30,7 +30,7 @@ ul {
 
   display: block;
   top: -70px;
-  margin-left: -150px;
+  margin-left: -130px;
 }
 .weather-app {
   border: 1px solid rgb(79, 146, 183);
@@ -49,4 +49,8 @@ ul {
 
 .weather-temperature img {
   margin-right: 10px;
+}
+.weather-temperature strong {
+  color: blue;
+  font-weight: 400;
 }
