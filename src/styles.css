@@ -54,3 +54,14 @@ ul {
   color: blue;
   font-weight: 400;
 }
+.btn btn-warning {
+  margin-right: -500px;
+  text-align: right;
+}
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}

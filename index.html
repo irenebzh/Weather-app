@@ -34,13 +34,17 @@
           <li id="date"></li>
         </ul>
         <div class="d-flex weather-temperature">
-          <img src="" alt="clear" id="icon" width="80" />
+          <img src="images/sun.jpg" alt="clear" id="icon" width="80" />
           <div>
             <span class="temperature" id="temperature">
               <strong>17</strong>
             </span>
 
-            <span class="units">°C / <a href="">°F</a></span>
+            <span class="units">
+              <a href="#" id="celsius-link" class="active">°C</a>
+              |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
           </div>
         </div>
 
@@ -49,9 +53,9 @@
           <li>🌬️Wind: <span id="wind"></span>km/h</li>
         </ul>
         <br />
-        <form class="search-form" id="search-form">
+        <form class="search-form" id="search-form" autocomplete="off">
           <div class="row">
-            <div class="col-6">
+            <div class="col-8">
               <input
                 type="search"
                 placeholder="Enter city"
@@ -59,10 +63,10 @@
                 id="city-input"
               />
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <button class="btn btn-warning">Submit</button>
             </div>
-            <div class="col-3">
+            <div class="col-2">
               <button
                 class="btn btn-success w-100"
                 id="current-location-button"
