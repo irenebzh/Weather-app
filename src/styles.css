@@ -102,3 +102,18 @@ a {
   border-radius: 8px;
   width: 300px;
 }
+.weather-forecast {
+  margin-top: 100px;
+  text-align: center;
+  color: black;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.9;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
