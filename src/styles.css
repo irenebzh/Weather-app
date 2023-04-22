@@ -3,17 +3,14 @@ body {
   background-size: cover;
   background-repeat: none;
   background-position: center;
-  height: 800px;
+  height: 900px;
+  padding-top: none;
 }
 h1 {
   color: rgb(9, 9, 46);
   font-family: "Poppins", sans-serif;
   margin-bottom: auto;
   margin-top: auto;
-}
-
-hr {
-  color: rgb(9, 9, 46);
 }
 
 p {
@@ -28,15 +25,18 @@ ul {
   padding-left: 0;
 }
 
+a {
+  text-decoration: none;
+}
 .container {
   max-width: 800px;
 }
 .conditions {
   position: relative;
-  left: 300px;
+  left: 450px;
 
   display: block;
-  top: -70px;
+  top: -100px;
   margin-left: -130px;
 }
 .weather-app {
@@ -51,8 +51,9 @@ ul {
   text-align: center;
   display: grid;
   padding: 0 auto;
-  margin: 0 auto;
+  margin-bottom: 30px;
   grid-template-columns: 120px 150px 150px 150px 130px;
+  margin-top: 80px;
 }
 
 .weather-temperature img {
@@ -73,6 +74,31 @@ ul {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
-a {
-  text-decoration: none;
+.temperature {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 200px;
+}
+.units {
+  position: relative;
+  top: -34px;
+}
+.btn-warning {
+  background-color: rgb(111, 220, 220);
+  border-color: rgb(9, 9, 46);
+  margin-left: 200px;
+}
+.row {
+  margin: 10px;
+  padding: 100px auto;
+}
+.btn-success {
+  background-color: rgb(68, 68, 220);
+  margin-left: 250px;
+}
+.search-form {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 300px;
 }
