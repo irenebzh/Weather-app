@@ -1,12 +1,19 @@
+body {
+  background-image: url(https://images.pexels.com/photos/1465904/pexels-photo-1465904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  height: 800px;
+}
 h1 {
-  color: rgb(66, 209, 161);
+  color: rgb(9, 9, 46);
   font-family: "Poppins", sans-serif;
   margin-bottom: auto;
   margin-top: auto;
 }
 
 hr {
-  color: rgb(14, 103, 73);
+  color: rgb(9, 9, 46);
 }
 
 p {
@@ -16,7 +23,7 @@ p {
 }
 ul {
   list-style: none;
-  color: rgba(18, 189, 43, 0.989);
+  color: rgba(9, 9, 46);
   margin-top: none;
   padding-left: 0;
 }
@@ -33,11 +40,12 @@ ul {
   margin-left: -130px;
 }
 .weather-app {
-  border: 1px solid rgb(79, 146, 183);
+  border: 1px solid rgb(9, 9, 46);
   border-radius: 10px;
 
   padding: 10px;
   margin: 30px;
+  max-width: 800px;
 }
 .container-grid {
   text-align: center;
@@ -63,5 +71,8 @@ ul {
   cursor: default;
 }
 .weather-temperature .active:hover {
+  text-decoration: none;
+}
+a {
   text-decoration: none;
 }
