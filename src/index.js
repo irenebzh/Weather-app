@@ -20,6 +20,37 @@ function formatDate(date) {
   let day = days[dayIndex];
   return `${day} ${hours}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Th"];
+  let forecastHTML = ` <div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    
+              <div class="col-2">
+                <div class="weather-forecast-date">
+                  ${day}
+                  <img
+                    src="https://openweathermap.org/img/wn/50d@2x.png"
+                    alt=""
+                    width="80"
+                  />
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max">20°</span>
+                    <span class="weather-forecast-temperature-min">12°</span>
+                  </div>
+                </div>
+              </div>
+              `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function cityInput(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-input").value;
@@ -43,6 +74,7 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 search("San Diego");
+displayForecast();
 
 function showTemperature(response) {
   console.log(response.data);
