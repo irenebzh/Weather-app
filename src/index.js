@@ -49,6 +49,8 @@ function showTemperature(response) {
   let cityElement = document.querySelector("h1");
   cityElement.innerHTML = `${response.data.name}`;
 
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
   let celsiusTemperature = Math.round(response.data.main.temp);
   console.log(response.data.main.temp);
 

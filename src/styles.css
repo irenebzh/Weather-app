@@ -117,3 +117,6 @@ a {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+li::first-letter {
+  text-transform: capitalize;
+}
