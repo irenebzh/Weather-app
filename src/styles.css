@@ -1,5 +1,6 @@
 body {
   background-image: url(https://images.pexels.com/photos/1465904/pexels-photo-1465904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
   background-size: cover;
   background-repeat: none;
   background-position: center;
@@ -74,20 +75,22 @@ a {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
-.temperature {
-  font-size: 64px;
+.weather-temperature .temperature {
+  font-size: 70px;
   font-weight: 400;
   line-height: 1;
-  margin-top: 200px;
+  line-height: 2;
+  margin-top: -200px;
 }
 .units {
-  position: relative;
   top: -34px;
+  position: relative;
 }
 .btn-warning {
   background-color: rgb(111, 220, 220);
   border-color: rgb(9, 9, 46);
   margin-left: 200px;
+  box-shadow: 0px 0px 2px 2px rgb(100, 149, 164);
 }
 .row {
   margin: 10px;
@@ -96,6 +99,15 @@ a {
 .btn-success {
   background-color: rgb(68, 68, 220);
   margin-left: 250px;
+  box-shadow: 0px 0px 2px 2px rgb(100, 149, 164);
+}
+.btn-success:hover {
+  background-color: rgb(225, 196, 160);
+  transition: ease-in-out;
+}
+.btn-warning:hover {
+  background-color: rgb(225, 196, 160);
+  transition: ease-in-out;
 }
 .search-form {
   margin-bottom: 20px;
