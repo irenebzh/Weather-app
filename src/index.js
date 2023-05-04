@@ -45,13 +45,15 @@ function search(city) {
 }
 
 function showTemperature(response) {
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   console.log(response.data);
   let cityElement = document.querySelector("h1");
   cityElement.innerHTML = `${response.data.name}`;
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-  let celsiusTemperature = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
   console.log(response.data.main.temp);
 
   let temperatureElement = document.querySelector("#temperature");
@@ -68,25 +70,6 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
-    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  });
-
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  });
 
   getForecast(response.data.coord);
 }
@@ -152,5 +135,24 @@ currentLocationButton.addEventListener("click", showPosition);
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+});
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+});
 
 search("San Diego");
